@@ -1,0 +1,12 @@
+---
+layout: default
+title: Word Parts
+---
+<h2>Word Parts</h2>
+{% assign parts = site.data.parts %}
+{% assign parts = parts | sort:"Root" %}
+{% for part in parts %}
+  <ul>
+    <li><strong>{{part.Root}}</strong> {{part.meaning}}</li>
+  </ul>
+{% endfor %}
